@@ -2,7 +2,7 @@
     display: flex;
     color:plum;
     padding: 30px;
-    border: 2px solid purple;
+    /* border: 2px solid purple; */
     border-radius: 20px;
     text-align: center;
     align-items: center;
@@ -13,35 +13,36 @@
 
 .image_container {
     display: flex;
+    /* border: 2px solid rgb(30, 128, 0); */
+    border-radius: 20px;
     justify-content:center;
     align-items: center;
     transition: transform 0.5s ease;
     transform: translateX(0);
+    width: 60%;
+    overflow: hidden;
     /* transform: translateX(-${(currentInd * 100) / 3}%); */
 }
 
 .image {
     border-radius: 13px;
-    max-width:10%;
-    height: auto;
-    margin: 0 40px;
-}
-
-button {
-    font-size: 2rem;
-    cursor: pointer;
-    position: absolute;
-    /* top: 50%;
-    transform: translateY(-50%);
-    z-index:1; */
+    /* max-width:20%; */
+    height: 130px;
+    margin: 0 10px;
 }
 
 .prevButton {
-    /* position: absolute; */
-    left: 10px;
+    cursor: pointer;
+    left: 170px;
+    width: 50px; 
+    height: 50px; 
+    position: absolute;
 }
 
 .nextButton {
-    /* position: absolute; */
-    right: 10px;
+    cursor: pointer;
+    right: 170px;
+    width: 50px; 
+    height: 50px;
+    position: absolute;
 }

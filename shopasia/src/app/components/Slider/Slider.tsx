@@ -3,11 +3,11 @@ import "./slider.css";
 import { useState } from "react";
 
 const images = [
-    "/images/TopBanner.jpg",
-    "/images/purple.jpg",
-    "/images/TopBanner.jpg",
-    "/images/TopBanner.jpg",
-    "/images/TopBanner.jpg"
+    "/images/PopularButton.png",
+    "/images/KoreaButton.png",
+    "/images/JapanButton.png",
+    "/images/ChinaButton.png",
+    "/images/OtherButton.png"
 ]
 export default function Slider() {
     const [currentInd, setCurrentInd] = useState(0);
@@ -55,8 +55,7 @@ export default function Slider() {
     return (
         <div className = "slider_container">
             <button className="prevButton" onClick = {prev}>
-                 prev 
-                 {/* <img src="/images/prevButton.png" alt="Previous" />  */}
+                 <img src="/images/LeftIcon_1.png" width={10} height={10} alt="Previous" /> 
             </button>
             <div className = "image_container"style={{
                 transform: 'translateX(-${(currentInd * 100) / 3}%)'
@@ -65,13 +64,18 @@ export default function Slider() {
                 {/* review */}
                 {/* {images.slice(currentInd, currentInd+3).map((image, index) => ( */}
                 {/* {displayedImages.map((image, index) => (  */}
+                
                 {wrappedSlice(images, currentInd, currentInd+2).map((image, index) => ( 
                 
                     <img key={index} src={image} className="image" alt={`Slide ${currentInd + index + 1}`} />
                 ))}
                 {/* <img src={images[currentInd]} className ="image" alt={'Slide ${currentInd + 1}'} /> */}
+                
             </div>
-            <button className="nextButton" onClick = {next}> next </button>
+            <button className="nextButton" onClick = {next}>
+                
+                <img src="/images/RightIcon.png" alt="Next" /> 
+            </button>
         </div>
 
     )

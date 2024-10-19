@@ -1,8 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Header from "./components/Header";
-import Searchbar from "./components/Searchbar"
-import Slider from "./components/slider"
+import Slider from "./components/Slider/slider";
 import Searchbar from "./components/Searchbar/Searchbar";
 
 export default function Home() {
@@ -71,10 +70,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-      
       <Slider />
-=======
       <section>
         <div>
           <div className="text-center text-4xl font-bold">WHO WE ARE</div>
@@ -138,7 +134,6 @@ export default function Home() {
           <p>Copyright©ShopAsia.com All Rights Reserved</p>
         </div>
       </section>
->>>>>>> d10f729e6afc054d9660252afe4cf32c328f3237
     </main>
   );
 }
