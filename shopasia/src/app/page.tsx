@@ -2,10 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 import Header from "./components/Header";
 import Searchbar from "./components/Searchbar"
+import Slider from "./components/slider"
 
 export default function Home() {
   return (
     <main className="">
+      <Slider />
       <Header />
       <section className="flex flex-col w-full pt-24 bg-bgBlack">
         <div className=" flex-col flex">
