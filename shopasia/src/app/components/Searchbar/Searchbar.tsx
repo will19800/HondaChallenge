@@ -8,6 +8,7 @@ export default function Searchbar() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log(JSON.stringify({url}))
     const response = await fetch('/api/scrape', {
         method: 'POST',
         headers: {
@@ -17,17 +18,19 @@ export default function Searchbar() {
     });
 
     const data = await response.json();
+    console.log(data)
+
     if (response.ok) {
-        // Successfully received data
-        // Here you can redirect or update the state to display the product information
+        console.log("made it")
     } else {
-        console.error(data.error); // Handle error
+        console.log("fuck")
+        
+        // console.error(data.error); // Handle error
     }
   }
-  console.log(url)
 
   return (
-    <form className="flex justify-center my-2 w-full">
+    <form className="flex justify-center my-2 w-full" onSubmit={handleSubmit}>
     <input
         className="search-bar bg-darkerPurple text-left rounded-full w-5/12 py-5 px-4 border placeholder-white"
         type="text"

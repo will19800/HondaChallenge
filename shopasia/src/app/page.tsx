@@ -71,11 +71,11 @@ export default function Home() {
       </section>
       <section>
         <div>
-          <div className="text-center text-4xl font-bold">HOW TO BUY</div>
-          <div className="flex ">
-            <img src="images/TopBanner.jpg" />
-            <img src="images/TopBanner.jpg" />
-            <img src="images/TopBanner.jpg" />
+          <div className="text-center text-4xl font-bold">WHO WE ARE</div>
+          <div className="flex gap-16 justify-center m-10">
+            <img src="images/FirstBanner.png" width={350} height={500} />
+            <img src="images/SecondBanner.png" width={350} height={500} />
+            <img src="images/ThirdBanner.png" width={350} height={500} />
           </div>
         </div>
       </section>
