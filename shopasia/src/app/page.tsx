@@ -2,12 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import Header from "./components/Header";
 import Searchbar from "./components/Searchbar/Searchbar"
-import Slider from "./components/slider"
+import Slider from "./components/Slider/Slider"
 
 export default function Home() {
   return (
     <main className="">
-      <Slider />
       <Header />
       <section className="flex flex-col w-full pt-24 bg-bgBlack">
         <div className=" flex-col flex">
@@ -27,19 +26,22 @@ export default function Home() {
             Try GoCaly for Free
           </Link>
         </div>
-        <Searchbar />
+        <div className="flex justify-center">
+         <Searchbar />
+        </div>
+ 
         <div className="mb-20">
           <div className="flex flex-row justify-center">
             <div className="text-white w-3/12 p-8">
               <h1 className="text-xl mb-2">Cost-Effective Shipping</h1>
-              <p className="font-light text-gray-400">
+              <p className="font-light text-white">
                 By grouping multiple orders together, we reduce shipping costs
                 and pass the savings directly to you.
               </p>
             </div>
             <div className="text-white w-3/12 p-8">
               <h1 className="text-xl mb-2">Secure Warehousing</h1>
-              <p className="font-light text-gray-400">
+              <p className="font-light text-white">
                 Your packages are stored safely in our strategically located
                 warehouses, ready to be consolidated for cheaper international
                 shipping.
@@ -47,7 +49,7 @@ export default function Home() {
             </div>
             <div className="text-white w-3/12 p-8">
               <h1 className="text-xl mb-2">Streamlined Logistics</h1>
-              <p className="font-light text-gray-400">
+              <p className="font-light text-white">
                 We handle the complexities of international logistics, ensuring
                 your orders are delivered efficiently and on time.
               </p>
@@ -55,6 +57,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+      
+      <Slider />
     </main>
   );
 }

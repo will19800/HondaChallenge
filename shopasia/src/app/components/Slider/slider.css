@@ -1,0 +1,47 @@
+.slider_container {
+    display: flex;
+    color:plum;
+    padding: 30px;
+    border: 2px solid purple;
+    border-radius: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.image_container {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    transition: transform 0.5s ease;
+    transform: translateX(0);
+    /* transform: translateX(-${(currentInd * 100) / 3}%); */
+}
+
+.image {
+    border-radius: 13px;
+    max-width:10%;
+    height: auto;
+    margin: 0 40px;
+}
+
+button {
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    /* top: 50%;
+    transform: translateY(-50%);
+    z-index:1; */
+}
+
+.prevButton {
+    /* position: absolute; */
+    left: 10px;
+}
+
+.nextButton {
+    /* position: absolute; */
+    right: 10px;
+}
