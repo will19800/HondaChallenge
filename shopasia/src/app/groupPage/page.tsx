@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import Header from "./components/Header";
-import Slider from "./components/Slider/Slider"
-import Searchbar from "./components/Searchbar/Searchbar";
+import Header from "../components/Header";
+import Slider from "../components/Slider/Slider"
+import Searchbar from "../components/Searchbar/Searchbar";
 
 export default function Home() {
   return (
@@ -24,11 +24,10 @@ export default function Home() {
       >
         <div className=" flex-col flex">
           <h1 className="text-8xl mt-10 text-white text-center font-bold">
-            Streamlined Shipping
+            Group Orders
           </h1>
           <p className="text-white my-8 text-center text-lg">
-            Join the millions of users who get their overseas packages delivered
-            efficiently and affordably
+            Win Fansigns with less hassle and for cheaper or buy albums for cheap!
           </p>
         </div>
         <div className="flex flex-row justify-center">
@@ -40,28 +39,18 @@ export default function Home() {
           </Link>
         </div>
         <div className="mt-4">
-        <Searchbar />
+        
         </div>
       </section>
-      <Slider/>
       <section>
         <div className="mt-10">
-          <div className="text-center text-4xl font-bold">WHO WE ARE</div>
+          <div className="text-center text-4xl font-bold">OPTIONS</div>
           <div className="flex gap-16 justify-center m-10">
-            <img src="images/FirstBanner.png" width={350} height={500} />
-            <Link href="/groupPage">
-              
-                <Image
-                  src="/images/SecondBanner.png" 
-                  alt = "To the Group Order Page"
-                  width={350} 
-                  height={500}
-                  className = "cursor-pointer"
-                />
-            
+            <img src="images/hostButton.png" width={350} height={500} />
+            <img src="images/AlbumButton.png" width={350} height={500} />
+            <Link href="https://www.ktown4u.com/event">
+              <Image src="/images/FansignButton.png" width={350} height={500} alt="To fansign info page" className="cursor-pointer"/>
             </Link>
-            
-            <img src="images/ThirdBanner.png" width={350} height={500} />
           </div>
         </div>
       </section>
