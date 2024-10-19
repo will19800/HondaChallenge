@@ -3,12 +3,12 @@ import "../globals.css";
 
 export default function Header() {
   return (
-    <header className="flex flex-row mx-auto justify-between py-4 items-center bg-bgBlack fixed w-full z-50 custom-border">
+    <header className="flex bg-darkerPurple flex-row mx-auto justify-between py-4 items-center bg-bgBlack fixed w-full z-50 custom-border">
       <div className="flex flex-row items-center gap-4 ml-52">
         <img
-          src="/svgs/calender.svg"
-          width={20}
-          height={20}
+          src="/images/TopBanner.jpg"
+          width={50}
+          height={50}
           className="mr-1"
         ></img>
         <Link href="{'/'}" className="text-white text-xl font-bold">
