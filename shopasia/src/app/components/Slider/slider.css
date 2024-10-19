@@ -27,21 +27,19 @@
     margin: 0 40px;
 }
 
-button {
-    font-size: 2rem;
-    cursor: pointer;
-    position: absolute;
-    /* top: 50%;
-    transform: translateY(-50%);
-    z-index:1; */
-}
 
 .prevButton {
     /* position: absolute; */
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
     left: 10px;
 }
 
 .nextButton {
     /* position: absolute; */
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
     right: 10px;
 }
