@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import Header from "./components/Header";
-import Searchbar from "./components/Searchbar/Searchbar"
-import Slider from "./components/Slider/Slider"
+import Searchbar from "./components/Searchbar"
+import Slider from "./components/slider"
 
 export default function Home() {
   return (
