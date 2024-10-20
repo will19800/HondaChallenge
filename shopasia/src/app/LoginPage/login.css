@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #b7a0c3;
+  }
+  
+  .login-container {
+    background-color: white;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 100px;
+    text-align: center;
+  }
+  
+  .login-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .login-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 12px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: left;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+
+  .checkbox {
+    display: flex;
+    align-items: left;
+  }
+  .checkbox label {
+    text-decoration: underline;
+    font-size: small;
+    margin-bottom: 25px;
+  }
+
+  .checkbox input {
+    appearance: none; 
+    width: 15px; 
+    height: 15px; 
+    border: 1.5px solid;
+    border-radius: 4px; 
+    outline: none;
+    cursor: pointer; 
+    margin-right: 5px;
+    transition: background-color 0.3s; /* Smooth transition */
+  }
+
+  .checkbox input:checked {
+    background-color: #b7a0c3;
+  }
+
+  .forgot-password {
+    text-align: right;
+    text-decoration: underline;
+    font-size: small;
+    margin-top: 8px;
+  }
+
+  .new-account {
+    text-align: right;
+    text-decoration: underline;
+    font-size: small;
+    margin-top: 2px;
+  }
+
+  .login-button {
+    padding: 10px;
+    background-color: #94829d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .login-button:hover {
+    background-color: #67407a;
+  }

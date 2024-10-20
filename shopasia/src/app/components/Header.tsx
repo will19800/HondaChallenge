@@ -31,10 +31,10 @@ export default function Header() {
       </div>
       <div>
         <nav className="flex gap-4 items-center mr-52">
-          <Link href="{/signin}" className="text-white">
+          <Link href="/LoginPage" className="text-white">
             Sign In
           </Link>
-          <Link href="{/signin}" className="bg-white text-black rounded-full p-2">
+          <Link href="/LoginPage" className="bg-white text-black rounded-full p-2">
             Get Started
           </Link>
         </nav>
