@@ -60,8 +60,10 @@ export default function Home() {
                 />
             
             </Link>
+            <Link href="/productPage">
+              <img src="images/ThirdBanner.png" width={350} height={500} />
+            </Link>
             
-            <img src="images/ThirdBanner.png" width={350} height={500} />
           </div>
         </div>
       </section>
