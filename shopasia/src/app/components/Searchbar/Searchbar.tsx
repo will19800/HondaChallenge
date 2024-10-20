@@ -21,6 +21,7 @@ export default function Searchbar() {
 
     if (response.ok) {
         console.log("made it", data)
+        
     } else {
         console.error(data.error); // Handle error
     }
