@@ -33,7 +33,7 @@ export default function Home() {
         </div>
         <div className="flex flex-row justify-center">
           <Link
-            href={"/tryGoCaly"}
+            href={"/groupPage"}
             className="mb-4 rounded-full text-center text-sm bg-btyellow text-white shadow-lg py-2 w-60"
           >
             Try our new Group Order Feature
