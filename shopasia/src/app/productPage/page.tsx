@@ -52,7 +52,7 @@ export default function Home() {
         {/* Product Details */}
         <div className="mb-6">
           <h1 className="text-2xl font-bold text-gray-800 mb-2">{productData.product_name || "N/A"}</h1>
-          <p className="text-xl text-gray-600 mb-4">${product.price.toFixed(2)}</p>
+          <p className="text-xl text-gray-600 mb-4">{productData.product_price || "N/A"}</p>
         </div>
 
         {/* Add to Cart Button */}

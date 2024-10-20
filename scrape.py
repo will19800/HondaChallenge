@@ -41,8 +41,12 @@ def scrape():
         productImageHTML = deepLayerHTML.find('div', class_="picGallery--qY53_w0u").find('div', class_="mainPicWrap--Ns5WQiHr").find('img', class_='mainPic--zxTtQs0P')
         productImage = productImageHTML.get('src')
         
+        productPriceHTML = deepLayerHTML.find('div', class_="purchasePanel--cG3DU6bX normalPanel--tH79cfP4 normalPanel").find('div', class_=False).find('div', class_=False).find('span', class_="text--Mdqy24Ex")
+        productPrice = productPriceHTML.text
+        
         return jsonify({'product_name': productName,
                         'product_image': productImage,
+                        'product_price' : productPrice
                         })
     
     except Exception as e:
