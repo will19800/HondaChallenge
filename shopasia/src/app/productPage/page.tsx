@@ -41,29 +41,33 @@ export default function Home() {
       <Header />
 
       <div className="flex justify-center items-center min-h-screen bg-gray-100">
-      <div className="bg-white rounded-lg shadow-lg overflow-hidden w-full max-w-md p-8">
-        {/* Product Image */}
-        <img
-          src={productData.product_image || "N/A"}
-          alt={product.name}
-          className="w-full h-64 object-cover mb-4 rounded-lg"
-        />
-
-        {/* Product Details */}
-        <div className="mb-6">
-          <h1 className="text-2xl font-bold text-gray-800 mb-2">{productData.product_name || "N/A"}</h1>
-          <p className="text-xl text-gray-600 mb-4">${product.price.toFixed(2)}</p>
-        </div>
-
-        {/* Add to Cart Button */}
-        <button
-          onClick={addToCart}
-          className="bg-[#94829d] text-white px-6 py-2 rounded-full w-full hover:bg-[#67407a] transition duration-200 focus:outline-none focus:ring-2 focus:ring-[#94829d]"
-        >
-          Add to Cart
-        </button>
-      </div>
+  <div className="bg-white rounded-lg shadow-lg overflow-hidden w-full max-w-4xl p-8 flex flex-col lg:flex-row">
+    
+    {/* Product Image - Left Box */}
+    <div className="flex-shrink-0 w-full lg:w-1/2 bg-gray-200 rounded-lg overflow-hidden mb-6 lg:mb-0">
+      <img
+        src={productData.product_image || "N/A"}
+        alt={productData.product_name || "N/A"}
+        className="w-full h-full object-cover"
+      />
     </div>
+
+    {/* Product Details - Right Box */}
+    <div className="flex flex-col justify-center w-full lg:w-1/2 px-4 lg:px-8 bg-white rounded-lg">
+      <h1 className="text-2xl font-bold text-gray-800 mb-2">{productData.product_name || "N/A"}</h1>
+      <p className="text-xl text-gray-600 mb-6">${productData.price.toFixed(2)}</p>
+
+      {/* Add to Cart Button */}
+      <button
+        onClick={addToCart}
+        className="bg-[#94829d] text-white px-6 py-2 rounded-full w-full hover:bg-[#67407a] transition duration-200 focus:outline-none focus:ring-2 focus:ring-[#94829d]"
+      >
+        Add to Cart
+      </button>
+    </div>
+  </div>
+</div>
+
 
 
       <section>
