@@ -32,7 +32,7 @@ export default function Searchbar() {
   return (
     <form className="flex justify-center my-2 w-full" onSubmit={handleSubmit}>
     <input
-        className="search-bar bg-darkerPurple text-left rounded-full w-5/12 py-5 px-4 border placeholder-white"
+        className="search-bar bg-darkerPurple text-left rounded-full py-5 px-4 border placeholder-white"
         type="text"
         placeholder="Enter product name / link"
         value={url} 

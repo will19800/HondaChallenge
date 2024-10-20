@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Header from "./components/Header";
-import Slider from "./components/Slider/slider";
+import Slider from "./components/Slider/slider"
 import Searchbar from "./components/Searchbar/Searchbar";
 
 export default function Home() {
@@ -39,45 +39,49 @@ export default function Home() {
             Try ShopAsia for Free
           </Link>
         </div>
+        <div className="mt-4">
         <Searchbar />
-        
-      </section>
-      <section>
-        <div className="mt-10 mb-10">
-          <div className="flex flex-row justify-center">
-            <div className="text-white w-3/12 p-8">
-              <h1 className="text-xl mb-2">Cost-Effective Shipping</h1>
-              <p className="font-light text-white">
-                By grouping multiple orders together, we reduce shipping costs
-                and pass the savings directly to you.
-              </p>
-            </div>
-            <div className="text-white w-3/12 p-8">
-              <h1 className="text-xl mb-2">Secure Warehousing</h1>
-              <p className="font-light text-white">
-                Your packages are stored safely in our strategically located
-                warehouses, ready to be consolidated for cheaper international
-                shipping.
-              </p>
-            </div>
-            <div className="text-white w-3/12 p-8">
-              <h1 className="text-xl mb-2">Streamlined Logistics</h1>
-              <p className="font-light text-white">
-                We handle the complexities of international logistics, ensuring
-                your orders are delivered efficiently and on time.
-              </p>
-            </div>
-          </div>
         </div>
       </section>
-      <Slider />
+      <Slider/>
       <section>
-        <div>
+        <div className="mt-10">
           <div className="text-center text-4xl font-bold">WHO WE ARE</div>
           <div className="flex gap-16 justify-center m-10">
             <img src="images/FirstBanner.png" width={350} height={500} />
             <img src="images/SecondBanner.png" width={350} height={500} />
             <img src="images/ThirdBanner.png" width={350} height={500} />
+          </div>
+        </div>
+      </section>
+      <section>
+        <div className="flex ml-20">
+          <img src="/images/BigBanner.png" width={600} height={400}/>
+          <div>
+          <div className="flex flex-col justify-center mt-12">
+            <div className="text-white bg-darkerPurple rounded-2xl mr-4 p-8 mb-2">
+              <h1 className="text-4xl mb-2">Cost-Effective Shipping</h1>
+              <p className="font-light text-2xl text-white">
+                By grouping multiple orders together, we reduce shipping costs
+                and pass the savings directly to you.
+              </p>
+            </div>
+            <div className="text-white p-8 bg-darkerPurple rounded-2xl mr-4 mb-2">
+              <h1 className="text-4xl mb-2">Secure Warehousing</h1>
+              <p className="font-light text-xl text-white">
+                Your packages are stored safely in our strategically located
+                warehouses, ready to be consolidated for cheaper international
+                shipping.
+              </p>
+            </div>
+            <div className="text-white p-8 bg-darkerPurple rounded-2xl mr-4 mb-2">
+              <h1 className="text-4xl mb-2">Streamlined Logistics</h1>
+              <p className="font-light text-xl text-white">
+                We handle the complexities of international logistics, ensuring
+                your orders are delivered efficiently and on time.
+              </p>
+            </div>
+        </div>
           </div>
         </div>
       </section>
@@ -134,6 +138,7 @@ export default function Home() {
           <p>Copyright©ShopAsia.com All Rights Reserved</p>
         </div>
       </section>
+      
     </main>
   );
 }

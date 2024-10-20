@@ -1,4 +1,5 @@
 .search-bar {
+    width: 600px;
   transition:
     border-color 0.2s,
     opacity 0.2s ease; /* Transition for border and placeholder */
