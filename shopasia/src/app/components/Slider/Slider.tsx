@@ -55,8 +55,7 @@ export default function Slider() {
     return (
         <div className = "slider_container">
             <button className="prevButton" onClick = {prev}>
-                 prev 
-                 {/* <img src="/images/prevButton.png" alt="Previous" />  */}
+                 <img src="/images/TopBanner.png" alt="Previous" /> 
             </button>
             <div className = "image_container"style={{
                 transform: 'translateX(-${(currentInd * 100) / 3}%)'

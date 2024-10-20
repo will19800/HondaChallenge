@@ -2,7 +2,6 @@ import scrapeProductPage from '../../lib/scrape';
 
 export async function POST(req) {
     const { url } = await req.json();
-    console.log(url)
     const productData = await scrapeProductPage(url);
 
     if (productData) {

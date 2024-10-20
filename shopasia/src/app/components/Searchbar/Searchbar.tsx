@@ -8,7 +8,7 @@ export default function Searchbar() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(JSON.stringify({url}))
+    console.log(JSON.stringify({ url }))
     const response = await fetch('/api/scrape', {
         method: 'POST',
         headers: {
@@ -18,14 +18,11 @@ export default function Searchbar() {
     });
 
     const data = await response.json();
-    console.log(data)
 
     if (response.ok) {
-        console.log("made it")
+        console.log("made it", data)
     } else {
-        console.log("fuck")
-        
-        // console.error(data.error); // Handle error
+        console.error(data.error); // Handle error
     }
   }
 

@@ -36,7 +36,7 @@ export default function Home() {
             href={"/tryGoCaly"}
             className="mb-4 rounded-full text-center text-sm bg-btyellow text-white shadow-lg py-2 w-60"
           >
-            Try ShopAsia for Free
+            Try our new Group Order Feature
           </Link>
         </div>
         <div className="mt-4">
