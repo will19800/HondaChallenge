@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <header className="flex bg-darkerPurple flex-row mx-auto justify-between py-4 items-center bg-bgBlack fixed w-full z-50 custom-border">
       <div className="flex flex-row items-center ml-52">
-        <Link href="{'/'}" className="text-white text-xl font-bold mr-4">
+        <Link href="http://localhost:3000" className="text-white text-xl font-bold mr-4">
           <img src="/images/smallerLogo.png" width={180} height={100} />
         </Link>
         <nav className="flex gap-4">
