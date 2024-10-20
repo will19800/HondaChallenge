@@ -23,7 +23,7 @@ export default function Searchbar() {
     if (response.ok) {
         console.log("made it", data)
         localStorage.setItem('productData', JSON.stringify(data));
-        router.push('/ProductInfo');
+        router.push('/productPage');
     } else {
         console.error(data.error); // Handle error
     }

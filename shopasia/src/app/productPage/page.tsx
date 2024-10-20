@@ -1,11 +1,28 @@
 'use client';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Header from "../components/Header";
 
+interface ProductData {
+  product_name: string;
+}
+
 export default function Home() {
+  const [productData, setProductData] = useState<ProductData | null>(null);
   const [cart, setCart] = useState([]);
+
+  useEffect(() => {
+      // Retrieve the JSON data from localStorage
+      const data = localStorage.getItem('productData');
+      if (data) {
+        setProductData(JSON.parse(data)); // Parse the JSON string back into an object
+      }
+    }, []);
+    
+  if (!productData) {
+      return <Header />
+  }
 
   const product = {
     id: 1,
@@ -18,6 +35,7 @@ export default function Home() {
     //setCart((prevCart) => [...prevCart, product]);
     alert(`${product.name} has been added to your cart!`);
   };
+
   return (
     <main>
       <Header />
@@ -26,14 +44,14 @@ export default function Home() {
       <div className="bg-white rounded-lg shadow-lg overflow-hidden w-full max-w-md p-8">
         {/* Product Image */}
         <img
-          src={product.imageUrl}
+          src={productData.product_image || "N/A"}
           alt={product.name}
           className="w-full h-64 object-cover mb-4 rounded-lg"
         />
 
         {/* Product Details */}
         <div className="mb-6">
-          <h1 className="text-2xl font-bold text-gray-800 mb-2">{product.name}</h1>
+          <h1 className="text-2xl font-bold text-gray-800 mb-2">{productData.product_name || "N/A"}</h1>
           <p className="text-xl text-gray-600 mb-4">${product.price.toFixed(2)}</p>
         </div>
 

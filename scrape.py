@@ -35,10 +35,15 @@ def scrape():
         #Get Into Deep Layer
         deepLayerHTML = soup.find('div', id='ice-container').find('div').find('div', class_='main--XyozDD28').find('div', class_='pageContentWrap').find('div', class_='content--SdcyFggV').find('div', class_="BasicContent--neLyCouC").find('div', class_="summaryInfoWrap--Ndc7k4Hv")
 
-        productHTML = deepLayerHTML.find('div', class_="purchasePanel--cG3DU6bX normalPanel--tH79cfP4 normalPanel").find('div', class_=False).find('div', class_="ItemTitle--UReZzEW5").find('h1')
-        productName = productHTML.get('title')
+        productTitleHTML = deepLayerHTML.find('div', class_="purchasePanel--cG3DU6bX normalPanel--tH79cfP4 normalPanel").find('div', class_=False).find('div', class_="ItemTitle--UReZzEW5").find('h1')
+        productName = productTitleHTML.get('title')
         
-        return jsonify({'product_name': productName})
+        productImageHTML = deepLayerHTML.find('div', class_="picGallery--qY53_w0u").find('div', class_="mainPicWrap--Ns5WQiHr").find('img', class_='mainPic--zxTtQs0P')
+        productImage = productImageHTML.get('src')
+        
+        return jsonify({'product_name': productName,
+                        'product_image': productImage,
+                        })
     
     except Exception as e:
         return jsonify({'error': str(e)}), 500
