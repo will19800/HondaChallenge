@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Slider from "./components/Slider/Slider"
 import Searchbar from "./components/Searchbar/Searchbar";
 
+
 export default function Home() {
   return (
     <main>
@@ -33,7 +34,7 @@ export default function Home() {
         </div>
         <div className="flex flex-row justify-center">
           <Link
-            href={"/tryGoCaly"}
+            href={"/groupPage"}
             className="mb-4 rounded-full text-center text-sm bg-btyellow text-white shadow-lg py-2 w-60"
           >
             Try our new Group Order Feature
@@ -60,8 +61,10 @@ export default function Home() {
                 />
             
             </Link>
+            <Link href="/productPage">
+              <img src="images/ThirdBanner.png" width={350} height={500} />
+            </Link>
             
-            <img src="images/ThirdBanner.png" width={350} height={500} />
           </div>
         </div>
       </section>
