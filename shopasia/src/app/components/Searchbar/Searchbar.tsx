@@ -1,10 +1,11 @@
 "use client";
-
+import { useRouter } from 'next/navigation'; // Import useRouter
 import "./Searchbar.css";
 import React, { useState } from "react";
 
 export default function Searchbar() {
   const [url, setUrl] = useState("");
+  const router = useRouter(); 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -21,7 +22,8 @@ export default function Searchbar() {
 
     if (response.ok) {
         console.log("made it", data)
-        
+        localStorage.setItem('productData', JSON.stringify(data));
+        router.push('/ProductInfo');
     } else {
         console.error(data.error); // Handle error
     }

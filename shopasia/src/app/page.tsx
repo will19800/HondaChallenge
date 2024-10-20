@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Slider from "./components/Slider/Slider"
 import Searchbar from "./components/Searchbar/Searchbar";
 
+
 export default function Home() {
   return (
     <main>
